@@ -14,6 +14,17 @@ const courseSchema = mongoose.Schema(
       type: String,
       required: true,
     },
+    aboutCourse: {
+      type: String,
+      required: true,
+    },
+    price: {
+      type: String,
+      required: true,
+    },
+    thumbnail: {
+      type: String,
+    },
     studentsEnrolled: [
       {
         type: mongoose.Schema.Types.ObjectId,
@@ -32,13 +43,6 @@ const courseSchema = mongoose.Schema(
         },
       },
     ],
-    thumbnail: {
-      type: String,
-    },
-    aboutCourse: {
-      type: String,
-      required: true,
-    },
     testimonials: [
       {
         buyerId: {
@@ -51,10 +55,6 @@ const courseSchema = mongoose.Schema(
         },
       },
     ],
-    price: {
-      type: Number,
-      required: true,
-    },
     lectures: [
       {
         letureId: {
